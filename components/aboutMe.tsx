@@ -11,16 +11,16 @@ export default function Main() {
             className={`flex flex-col items-center justify-center min-h-screen section-padding fade-in-up ${isVisible ? 'visible' : ''}`}
         >
             {/* Título principal */}
-            <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8 text-center px-4'>About me</h1>
+            <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8 text-center px-4 '>Sobre mí</h1>
             
             {/* Contenido principal responsivo */}
             <div className='about-layout w-full max-w-6xl px-4'>
                 {/* Columna de texto */}
                 <div className='flex flex-col flex-1 text-center md:text-left'>
                     <div className='mb-4' id='Presentacion'>
-                        <h2 className='text-xl md:text-2xl lg:text-3xl font-bold mb-4'>
+                        <h3 className='text-3xl md:text-2xl lg:text-3xl font-bold mb-4'>
                             Hola soy Manuel Guirado Baeza
-                        </h2>
+                        </h3>
                     </div>
                     <p className='text-base md:text-lg mb-6 leading-relaxed max-w-2xl'>
                         Desarrollador Full Stack con experiencia en proyectos personales y colaborativos. 

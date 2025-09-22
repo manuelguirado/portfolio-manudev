@@ -45,7 +45,7 @@ export default function Contact() {
       id="contact"
     >
       {/* Título principal arriba */}
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8 text-center px-4">Contact</h1>
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8 text-center px-4">Contacto</h1>
       
       {/* Contenedor con el mismo ancho que las otras secciones */}
       <div className="w-full max-w-6xl px-4">

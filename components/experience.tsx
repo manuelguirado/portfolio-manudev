@@ -11,16 +11,16 @@ export default function Experience() {
       id="experience"
     >
       {/* Título principal arriba */}
-      <h1 className="text-4xl font-bold mb-8 text-center">Experience</h1>
+      <h1 className="text-4xl font-bold mb-8 text-center">Experiencia</h1>
       
       {/* Contenedor con el mismo ancho que About me */}
       <div className="w-full max-w-4xl">
         <div className={`space-y-6 stagger-children ${isVisible ? 'visible' : ''}`}>
           {/* Experiencia 1 */}
           <div className="p-6 rounded-lg">
-            <h2 className="text-xl text-left font-semibold mb-2">
+            <h3 className="text-3xl text-left font-semibold mb-2">
               Desarrollador Full Stack - Proyecto Personal
-            </h2>
+            </h3>
             <span className="text-sm mb-4 block text-left">
               Marzo de 2025 - Agosto de 2025
             </span>
@@ -32,9 +32,9 @@ export default function Experience() {
           
           {/* Experiencia 2 */}
           <div className="p-6 rounded-lg">
-            <h2 className="text-xl text-left font-semibold mb-2">
+            <h3 className="text-3xl text-left font-semibold mb-2">
               Prácticas de desarrollo en Davante
-            </h2>
+            </h3>
             <span className="text-sm mb-4 block text-left">
               Marzo de 2025 - Junio de 2025
             </span>
@@ -46,9 +46,9 @@ export default function Experience() {
           
           {/* Experiencia 3 */}
           <div className="p-6 rounded-lg">
-            <h2 className="text-xl text-left font-semibold mb-2">
+            <h3 className="text-3xl text-left font-semibold mb-2">
               Software developer - Freelance remoto
-            </h2>
+            </h3>
             <span className="text-sm mb-4 block text-left">
               Agosto de 2024 - Diciembre de 2024
             </span>
@@ -59,9 +59,9 @@ export default function Experience() {
           </div>
           {/* Experiencia 4 */}
           <div className="p-6 rounded-lg">
-            <h2 className="text-xl text-left font-semibold mb-2">
+            <h3 className="text-3xl text-left font-semibold mb-2">
               Prácticas de Técnico informático - Ayuntamiento de Almuñecar, Granada Presencial
-            </h2>
+            </h3>
             <span className="text-sm mb-4 block text-left">
               Febrero de 2022 - Junio de 2022
             </span>

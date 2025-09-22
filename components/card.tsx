@@ -4,7 +4,7 @@ import React from "react";
 export default function Card() {
     return (
         <div className="flex flex-wrap gap-6 justify-center">
-            <div className="w-90 bg-gray-800 flex flex-col p-6 rounded-lg border border-gray-600 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105">
+            <div className="w-170 h-full bg-gray-800 flex flex-col p-6 rounded-lg border border-gray-600 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105">
                 {/* Imagen del proyecto */}
                 <img
                     src="/ChatFriends.png"
@@ -13,9 +13,9 @@ export default function Card() {
                 />
 
                 {/* Título del proyecto */}
-                <h2 className="text-xl text-left font-semibold mb-2 text-white">
+                <h3 className="text-2xl text-left font-semibold mb-2 text-white">
                     Chat Friends - Aplicación de Chat en Tiempo Real
-                </h2>
+                </h3>
 
                 {/* Tecnologías usadas con iconos */}
                 <div className="mb-4">
@@ -49,7 +49,7 @@ export default function Card() {
                     </a>
 
                     <a
-                        href="https://chat-friends-live.vercel.app"
+                        href="https://chat-friends-alpha.vercel.app/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200"
