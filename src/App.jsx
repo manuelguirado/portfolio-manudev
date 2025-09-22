@@ -13,11 +13,25 @@ function App() {
   return (
     <>
       <Header />
-      <Main />
-      <Experience />
-      <Proyects />
-      <Skils />
-      <Contact />
+      <div id="inicio" className="min-h-screen pt-20">
+        <Main />
+      </div>
+      <div className="section-separator"></div>
+      <div id="experiencia" className="min-h-screen">
+        <Experience />
+      </div>
+      <div className="section-separator"></div>
+      <div id="proyectos" className="min-h-screen">
+        <Proyects />
+      </div>
+      <div className="section-separator"></div>
+      <div id="habilidades" className="min-h-screen">
+        <Skils />
+      </div>
+      <div className="section-separator"></div>
+      <div id="contacto" className="min-h-screen">
+        <Contact />
+      </div>
     </>
   )
 }

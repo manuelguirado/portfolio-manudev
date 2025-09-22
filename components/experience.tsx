@@ -8,7 +8,7 @@ export default function Experience() {
     <div 
       ref={ref}
       className={`flex flex-col items-center justify-center h-full p-8 fade-in-left ${isVisible ? 'visible' : ''}`}
-      id="experience"
+      id="experiencia"
     >
       {/* Título principal arriba */}
       <h1 className="text-4xl font-bold mb-8 text-center">Experiencia</h1>

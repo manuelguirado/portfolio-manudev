@@ -8,6 +8,7 @@ export default function Main() {
     return (
         <main 
             ref={ref} 
+            id="sobre-mi"
             className={`flex flex-col items-center justify-center min-h-screen section-padding fade-in-up ${isVisible ? 'visible' : ''}`}
         >
             {/* Título principal */}
