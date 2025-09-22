@@ -1,0 +1,215 @@
+@font-face {
+  font-family: 'Michroma';
+  src: url('/fonts/Michroma-Regular.ttf') format('truetype');
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Cambio de center a flex-start */
+  margin: 0;
+  text-align: center;
+  font-family: 'Michroma';
+  min-height: 100vh; /* Cambio de height fijo a min-height */
+  overflow-x: hidden; /* Prevenir scroll horizontal */
+}
+
+body {
+  background-image: linear-gradient(to top right, #000000, #007596);
+  background-attachment: fixed; /* Fondo fijo en scroll */
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh; /* Cambio de height fijo */
+  color: white;
+  margin: 0;
+  padding: 0;
+  animation: scroll smoothAppear 2s ease-in-out;
+}
+
+/* === RESPONSIVIDAD === */
+
+/* Mobile First - Base styles */
+* {
+  box-sizing: border-box;
+}
+
+/* Contenedores responsivos */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 4rem;
+  }
+}
+
+/* Animación de escritura responsiva */
+#Presentacion h2 {
+  overflow: hidden;
+  border-right: 3px solid white;
+  white-space: nowrap;
+  text-align: left;
+  width: fit-content;
+  letter-spacing: 0.1em;
+  animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+  font-size: clamp(1.5rem, 4vw, 2rem); /* Tamaño responsivo */
+}
+
+/* Mobile adjustments para typewriter */
+@media (max-width: 768px) {
+  #Presentacion h2 {
+    white-space: normal; /* Permitir wrap en móvil */
+    animation: none; /* Desactivar animación en móvil */
+    border-right: none;
+  }
+}
+
+/* ... resto de animaciones existentes ... */
+
+/* === MEJORAS RESPONSIVAS PARA SECCIONES === */
+
+/* Headers responsivos */
+h1 {
+  font-size: clamp(2rem, 5vw, 4rem) !important;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 3rem) !important;
+}
+
+/* Espaciado responsivo */
+.section-padding {
+  padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem);
+}
+
+/* Grid responsivo para skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@media (min-width: 480px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* Cards responsivas */
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Layout de About Me responsivo */
+.about-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .about-layout {
+    flex-direction: row;
+    gap: 3rem;
+  }
+}
+
+/* Imagen de perfil responsiva */
+.profile-image {
+  width: clamp(150px, 30vw, 200px);
+  height: clamp(150px, 30vw, 200px);
+}
+
+/* Formulario responsivo */
+.form-container {
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Tooltips responsivos en móvil */
+@media (max-width: 768px) {
+  .skill-item::after {
+    display: none; /* Ocultar tooltips en móvil */
+  }
+  
+  .skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .skill-item::before {
+    content: attr(data-tooltip);
+    font-size: 0.75rem;
+    color: #ccc;
+  }
+}
+
+/* === ANIMACIONES RESPONSIVAS === */
+
+/* Reducir animaciones en dispositivos con preferencia */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Animaciones más suaves en móvil */
+@media (max-width: 768px) {
+  .fade-in-up,
+  .fade-in-left,
+  .fade-in-right,
+  .fade-in-scale {
+    transform: translateY(20px);
+    transition-duration: 0.5s;
+  }
+  
+  .stagger-children > * {
+    transform: translateY(10px);
+    transition-duration: 0.4s;
+  }
+}
