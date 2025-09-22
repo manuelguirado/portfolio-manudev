@@ -1,0 +1,71 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "experience": "Experiencia",
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "skills": "Habilidades",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Sobre mí",
+    "greeting": "Hola soy Manuel Guirado Baeza",
+    "description": "Desarrollador Full Stack con experiencia en proyectos personales y colaborativos. Apasionado por construir aplicaciones web escalables y aplicar buenas prácticas en el desarrollo backend y frontend. En busca de mi primera oportunidad profesional para aportar valor en equipos de desarrollo.",
+    "downloadCV": "Descargar CV"
+  },
+  "experience": {
+    "title": "Experiencia",
+    "jobs": {
+      "fullstack": {
+        "title": "Desarrollador Full Stack - Proyecto Personal",
+        "period": "Marzo de 2025 - Agosto de 2025",
+        "description": "Desarrollo de un Chat en tiempo real utilizando las tecnologías de Socket.io, Node.js, Next.js, MongoDB."
+      },
+      "practices": {
+        "title": "Prácticas de desarrollo en Davante",
+        "period": "Marzo de 2025 - Junio de 2025",
+        "description": "Desarrollo de una aplicación para que los usuarios puedan subir archivos de manera manual y automática a Google Drive usando Go."
+      },
+      "freelance": {
+        "title": "Software developer - Freelance remoto",
+        "period": "Agosto de 2024 - Diciembre de 2024",
+        "description": "Desarrollo de una aplicación web para la gestión de colegios, institutos y academias usando Python y Django."
+      },
+      "technician": {
+        "title": "Prácticas de Técnico informático - Ayuntamiento de Almuñecar, Granada Presencial",
+        "period": "Febrero de 2022 - Junio de 2022",
+        "description": "Reparación de Equipos informáticos, mantenimiento de equipos, actualización de software y software,configuración de impresoras"
+      }
+    }
+  },
+  "projects": {
+    "title": "Proyectos",
+    "chatFriends": {
+      "title": "Chat Friends - Aplicación de Chat en Tiempo Real",
+      "technologies": "Tecnologías utilizadas:",
+      "description": "Aplicación de chat en tiempo real que permite a los usuarios comunicarse instantáneamente con funcionalidades de mensajería en vivo, salas de chat y gestión de usuarios.",
+      "codeButton": "Código",
+      "liveButton": "Ver Live"
+    }
+  },
+  "skills": {
+    "title": "Habilidades"
+  },
+  "contact": {
+    "title": "Contacto",
+    "form": {
+      "name": "Nombre",
+      "namePlaceholder": "Tu nombre",
+      "email": "Email",
+      "emailPlaceholder": "tu@email.com",
+      "message": "Mensaje",
+      "messagePlaceholder": "Escribe tu mensaje aquí...",
+      "requiredField": "Completa este campo",
+      "sendButton": "Enviar Mensaje"
+    }
+  },
+  "language": {
+    "spanish": "Español",
+    "english": "English"
+  }
+}

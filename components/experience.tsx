@@ -1,8 +1,10 @@
 import React from "react";
 import { useScrollReveal } from '../src/hooks/useScrollReveal';
+import { useTranslation } from 'react-i18next';
 
 export default function Experience() {
   const { ref, isVisible } = useScrollReveal();
+  const { t } = useTranslation();
 
   return (
     <div 
@@ -11,7 +13,7 @@ export default function Experience() {
       id="experiencia"
     >
       {/* Título principal arriba */}
-      <h1 className="text-4xl font-bold mb-8 text-center">Experiencia</h1>
+      <h1 className="text-4xl font-bold mb-8 text-center">{t('experience.title')}</h1>
       
       {/* Contenedor con el mismo ancho que About me */}
       <div className="w-full max-w-4xl">
@@ -19,55 +21,51 @@ export default function Experience() {
           {/* Experiencia 1 */}
           <div className="p-6 rounded-lg">
             <h3 className="text-3xl text-left font-semibold mb-2">
-              Desarrollador Full Stack - Proyecto Personal
+              {t('experience.jobs.fullstack.title')}
             </h3>
             <span className="text-sm mb-4 block text-left">
-              Marzo de 2025 - Agosto de 2025
+              {t('experience.jobs.fullstack.period')}
             </span>
             <p className="leading-relaxed text-left text-lg">
-              Desarrollo de un Chat en tiempo real utilizando las tecnologías
-              de Socket.io, Node.js, Next.js, MongoDB.
+              {t('experience.jobs.fullstack.description')}
             </p>
           </div>
           
           {/* Experiencia 2 */}
           <div className="p-6 rounded-lg">
             <h3 className="text-3xl text-left font-semibold mb-2">
-              Prácticas de desarrollo en Davante
+              {t('experience.jobs.practices.title')}
             </h3>
             <span className="text-sm mb-4 block text-left">
-              Marzo de 2025 - Junio de 2025
+              {t('experience.jobs.practices.period')}
             </span>
             <p className="leading-relaxed text-left text-lg">
-              Desarrollo de una aplicación para que los usuarios puedan subir
-              archivos de manera manual y automática a Google Drive usando Go.
+              {t('experience.jobs.practices.description')}
             </p>
           </div>
           
           {/* Experiencia 3 */}
           <div className="p-6 rounded-lg">
             <h3 className="text-3xl text-left font-semibold mb-2">
-              Software developer - Freelance remoto
+              {t('experience.jobs.freelance.title')}
             </h3>
             <span className="text-sm mb-4 block text-left">
-              Agosto de 2024 - Diciembre de 2024
+              {t('experience.jobs.freelance.period')}
             </span>
             <p className="leading-relaxed text-left text-lg">
-              Desarrollo de una aplicación web para la gestión de colegios,
-              institutos y academias usando Python y Django.
+              {t('experience.jobs.freelance.description')}
             </p>
           </div>
           {/* Experiencia 4 */}
           <div className="p-6 rounded-lg">
             <h3 className="text-3xl text-left font-semibold mb-2">
-              Prácticas de Técnico informático - Ayuntamiento de Almuñecar, Granada Presencial
+              {t('experience.jobs.technician.title')}
             </h3>
             <span className="text-sm mb-4 block text-left">
-              Febrero de 2022 - Junio de 2022
+              {t('experience.jobs.technician.period')}
             </span>
             <p className="leading-relaxed text-left text-lg">
-              Reparación de Equipos informáticos, mantenimiento de equipos, actualizacion de software
-              y software,configuración de impresoras
+              {t('experience.jobs.technician.description')}
             </p>
           </div>
         </div>

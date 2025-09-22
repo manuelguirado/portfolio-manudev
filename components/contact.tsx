@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { useScrollReveal } from '../src/hooks/useScrollReveal';
 import { sendEmail } from '../utils/sendEmail';
+import { useTranslation } from 'react-i18next';
 
 
 
 export default function Contact() {
   const { ref, isVisible } = useScrollReveal();
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -45,7 +47,7 @@ export default function Contact() {
       id="contact"
     >
       {/* Título principal arriba */}
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8 text-center px-4">Contacto</h1>
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8 text-center px-4">{t('contact.title')}</h1>
       
       {/* Contenedor con el mismo ancho que las otras secciones */}
       <div className="w-full max-w-6xl px-4">
@@ -54,14 +56,14 @@ export default function Contact() {
             {/* Campo Nombre */}
             <div className="mb-4 md:mb-6">
               <label className="block text-white text-sm font-bold mb-2" htmlFor="name">
-                Nombre
+                {t('contact.form.name')}
               </label>
               <input
                 className="w-full py-2 md:py-3 px-3 md:px-4 text-white bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-500 focus:bg-gray-600 transition-all duration-200 text-sm md:text-base"
                 id="name"
                 name="name"
                 type="text"
-                placeholder="Tu nombre"
+                placeholder={t('contact.form.namePlaceholder')}
                 value={formData.name}
                 onChange={handleChange}
                 required
@@ -71,14 +73,14 @@ export default function Contact() {
             {/* Campo Email */}
             <div className="mb-4 md:mb-6">
               <label className="block text-white text-sm font-bold mb-2" htmlFor="email">
-                Email
+                {t('contact.form.email')}
               </label>
               <input
                 className="w-full py-2 md:py-3 px-3 md:px-4 text-white bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-500 focus:bg-gray-600 transition-all duration-200 text-sm md:text-base"
                 id="email"
                 name="email"
                 type="email"
-                placeholder="tu@email.com"
+                placeholder={t('contact.form.emailPlaceholder')}
                 value={formData.email}
                 onChange={handleChange}
                 required
@@ -88,14 +90,14 @@ export default function Contact() {
             {/* Campo Mensaje */}
             <div className="mb-4 md:mb-6">
               <label className="block text-white text-sm font-bold mb-2" htmlFor="message">
-                Mensaje
+                {t('contact.form.message')}
               </label>
               <textarea
                 className="w-full py-2 md:py-3 px-3 md:px-4 text-white bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-500 focus:bg-gray-600 transition-all duration-200 resize-none text-sm md:text-base"
                 id="message"
                 name="message"
                 rows={5}
-                placeholder="Escribe tu mensaje aquí..."
+                placeholder={t('contact.form.messagePlaceholder')}
                 value={formData.message}
                 onChange={handleChange}
                 required
@@ -113,7 +115,7 @@ export default function Contact() {
                 type="submit"
                 disabled={isLoading}
               >
-                {isLoading ? 'Enviando...' : 'Enviar Mensaje'}
+                {isLoading ? 'Enviando...' : t('contact.form.sendButton')}
               </button>
 
               {/* Mensajes de estado */}

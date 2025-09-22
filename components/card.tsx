@@ -1,7 +1,10 @@
 import { Github, ExternalLink } from "lucide-react";
 import React from "react";
+import { useTranslation } from 'react-i18next';
 
 export default function Card() {
+    const { t } = useTranslation();
+    
     return (
         <div className="flex flex-wrap gap-6 justify-center">
             <div className="w-80 h-full bg-gradient-to-br from-gray-800/40 to-gray-900/60 backdrop-blur-sm flex flex-col p-6 rounded-xl border border-gray-600/30 shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:transform hover:scale-105 hover:border-blue-500/50 group">
@@ -17,12 +20,12 @@ export default function Card() {
 
                 {/* Título del proyecto */}
                 <h3 className="text-2xl text-left font-semibold mb-2 text-white">
-                    Chat Friends - Aplicación de Chat en Tiempo Real
+                    {t('projects.chatFriends.title')}
                 </h3>
 
                 {/* Tecnologías usadas con iconos */}
                 <div className="mb-4">
-                    <span className="text-sm text-gray-300 mb-3 block font-medium">Tecnologías utilizadas:</span>
+                    <span className="text-sm text-gray-300 mb-3 block font-medium">{t('projects.chatFriends.technologies')}</span>
                     <div className="flex flex-wrap gap-2">
                         <span className="px-3 py-1.5 bg-gradient-to-r from-blue-600 to-blue-500 text-white text-xs rounded-full font-medium shadow-lg">React</span>
                         <span className="px-3 py-1.5 bg-gradient-to-r from-green-600 to-green-500 text-white text-xs rounded-full font-medium shadow-lg">Node.js</span>
@@ -34,9 +37,7 @@ export default function Card() {
 
                 {/* Descripción */}
                 <p className="text-left text-gray-300 mb-6 flex-grow">
-                    Aplicación de chat en tiempo real que permite a los usuarios comunicarse
-                    instantáneamente con funcionalidades de mensajería en vivo, salas de chat
-                    y gestión de usuarios.
+                    {t('projects.chatFriends.description')}
                 </p>
 
                 {/* Enlaces - Botones */}
@@ -48,7 +49,7 @@ export default function Card() {
                         className="flex items-center gap-2 px-4 py-2.5 bg-gradient-to-r from-gray-700 to-gray-600 hover:from-gray-600 hover:to-gray-500 text-white rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:transform hover:scale-105"
                     >
                         <Github className="h-4 w-4" />
-                        <span className="text-sm font-medium">Código</span>
+                        <span className="text-sm font-medium">{t('projects.chatFriends.codeButton')}</span>
                     </a>
 
                     <a
@@ -58,7 +59,7 @@ export default function Card() {
                         className="flex items-center gap-2 px-4 py-2.5 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:transform hover:scale-105"
                     >
                         <ExternalLink className="h-4 w-4" />
-                        <span className="text-sm font-medium">Ver Live</span>
+                        <span className="text-sm font-medium">{t('projects.chatFriends.liveButton')}</span>
                     </a>
                 </div>
             </div>

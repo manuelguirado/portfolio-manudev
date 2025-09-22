@@ -1,0 +1,71 @@
+{
+  "navigation": {
+    "home": "Home",
+    "experience": "Experience",
+    "about": "About me",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "About me",
+    "greeting": "Hi, I'm Manuel Guirado Baeza",
+    "description": "Full Stack Developer with experience in personal and collaborative projects. Passionate about building scalable web applications and applying best practices in backend and frontend development. Looking for my first professional opportunity to add value to development teams.",
+    "downloadCV": "Download CV"
+  },
+  "experience": {
+    "title": "Experience",
+    "jobs": {
+      "fullstack": {
+        "title": "Full Stack Developer - Personal Project",
+        "period": "March 2025 - August 2025",
+        "description": "Development of a real-time Chat using Socket.io, Node.js, Next.js, MongoDB technologies."
+      },
+      "practices": {
+        "title": "Development practices at Davante",
+        "period": "March 2025 - June 2025",
+        "description": "Development of an application for users to upload files manually and automatically to Google Drive using Go."
+      },
+      "freelance": {
+        "title": "Software developer - Remote Freelance",
+        "period": "August 2024 - December 2024",
+        "description": "Development of a web application for managing schools, institutes and academies using Python and Django."
+      },
+      "technician": {
+        "title": "IT Technician Practices - Almuñecar City Council, Granada On-site",
+        "period": "February 2022 - June 2022",
+        "description": "Computer equipment repair, equipment maintenance, software updates and software, printer configuration"
+      }
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "chatFriends": {
+      "title": "Chat Friends - Real-time Chat Application",
+      "technologies": "Technologies used:",
+      "description": "Real-time chat application that allows users to communicate instantly with live messaging features, chat rooms and user management.",
+      "codeButton": "Code",
+      "liveButton": "View Live"
+    }
+  },
+  "skills": {
+    "title": "Skills"
+  },
+  "contact": {
+    "title": "Contact",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "you@email.com",
+      "message": "Message",
+      "messagePlaceholder": "Write your message here...",
+      "requiredField": "Complete this field",
+      "sendButton": "Send Message"
+    }
+  },
+  "language": {
+    "spanish": "Español",
+    "english": "English"
+  }
+}

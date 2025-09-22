@@ -1,8 +1,25 @@
 import React, { useState, useEffect } from 'react';
+import { ChevronDown } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export default function Header() {
+    const { t, i18n } = useTranslation();
     const [activeSection, setActiveSection] = useState('inicio');
     const [isScrolled, setIsScrolled] = useState(false);
+    const [isLangDropdownOpen, setIsLangDropdownOpen] = useState(false);
+
+    const languages = [
+        { 
+            code: 'es', 
+            name: t('language.spanish'), 
+            flag: '🇪🇸'
+        },
+        { 
+            code: 'en', 
+            name: t('language.english'), 
+            flag: '🇬🇧'
+        }
+    ];
 
     useEffect(() => {
         const handleScroll = () => {
@@ -26,8 +43,20 @@ export default function Header() {
             }
         };
 
+        const handleClickOutside = (event: MouseEvent) => {
+            const target = event.target as Element;
+            if (!target.closest('.language-dropdown')) {
+                setIsLangDropdownOpen(false);
+            }
+        };
+
         window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+        document.addEventListener('click', handleClickOutside);
+        
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            document.removeEventListener('click', handleClickOutside);
+        };
     }, []);
 
     const scrollToSection = (sectionId: string) => {
@@ -40,11 +69,19 @@ export default function Header() {
         }
     };
 
+    const handleLanguageChange = (langCode: string) => {
+        i18n.changeLanguage(langCode);
+        setIsLangDropdownOpen(false);
+    };
+
+    const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];
+
     return (
-        <header className={`w-full h-16 md:h-20 flex justify-center items-center p-4 text-white fixed top-0 z-50 transition-all duration-300 ${
+        <header className={`w-full h-16 md:h-20 flex justify-between items-center px-4 md:px-8 text-white fixed top-0 z-50 transition-all duration-300 ${
             isScrolled ? 'bg-black/20 backdrop-blur-md border-b border-white/10' : 'bg-transparent'
         }`}>
-            <nav className='flex justify-center items-center'>
+            {/* Navegación principal */}
+            <nav className='flex justify-center items-center flex-1'>
                 <ul className='flex list-none gap-4 md:gap-8 text-sm md:text-base'>
                     <li>
                         <button 
@@ -53,7 +90,7 @@ export default function Header() {
                                 activeSection === 'inicio' ? 'text-blue-400' : ''
                             }`}
                         >
-                            Inicio
+                            {t('navigation.home')}
                             {activeSection === 'inicio' && (
                                 <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-400 rounded-full"></span>
                             )}
@@ -66,7 +103,7 @@ export default function Header() {
                                 activeSection === 'experiencia' ? 'text-blue-400' : ''
                             }`}
                         >
-                            Experiencia
+                            {t('navigation.experience')}
                             {activeSection === 'experiencia' && (
                                 <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-400 rounded-full"></span>
                             )}
@@ -79,7 +116,7 @@ export default function Header() {
                                 activeSection === 'sobre-mi' ? 'text-blue-400' : ''
                             }`}
                         >
-                            Sobre mí
+                            {t('navigation.about')}
                             {activeSection === 'sobre-mi' && (
                                 <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-400 rounded-full"></span>
                             )}
@@ -92,7 +129,7 @@ export default function Header() {
                                 activeSection === 'proyectos' ? 'text-blue-400' : ''
                             }`}
                         >
-                            Proyectos
+                            {t('navigation.projects')}
                             {activeSection === 'proyectos' && (
                                 <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-400 rounded-full"></span>
                             )}
@@ -105,7 +142,7 @@ export default function Header() {
                                 activeSection === 'habilidades' ? 'text-blue-400' : ''
                             }`}
                         >
-                            Habilidades
+                            {t('navigation.skills')}
                             {activeSection === 'habilidades' && (
                                 <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-400 rounded-full"></span>
                             )}
@@ -118,7 +155,7 @@ export default function Header() {
                                 activeSection === 'contacto' ? 'text-blue-400' : ''
                             }`}
                         >
-                            Contacto
+                            {t('navigation.contact')}
                             {activeSection === 'contacto' && (
                                 <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-400 rounded-full"></span>
                             )}
@@ -126,6 +163,36 @@ export default function Header() {
                     </li>
                 </ul>
             </nav>
+            
+            {/* Selector de idioma */}
+            <div className="relative language-dropdown">
+                <button
+                    onClick={() => setIsLangDropdownOpen(!isLangDropdownOpen)}
+                    className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 transition-all duration-300 hover:scale-105"
+                >
+                    <span className="text-xl">{currentLanguage.flag}</span>
+                    <span className="hidden sm:block text-sm font-medium">{currentLanguage.code.toUpperCase()}</span>
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isLangDropdownOpen ? 'rotate-180' : ''}`} />
+                </button>
+
+                {/* Dropdown */}
+                {isLangDropdownOpen && (
+                    <div className="absolute right-0 top-full mt-2 bg-black/80 backdrop-blur-md border border-white/20 rounded-lg shadow-2xl overflow-hidden min-w-[140px]">
+                        {languages.map((language) => (
+                            <button
+                                key={language.code}
+                                onClick={() => handleLanguageChange(language.code)}
+                                className={`w-full flex items-center gap-3 px-4 py-3 text-left hover:bg-white/10 transition-colors duration-200 ${
+                                    i18n.language === language.code ? 'bg-blue-500/20 text-blue-400' : 'text-white'
+                                }`}
+                            >
+                                <span className="text-lg">{language.flag}</span>
+                                <span className="text-sm font-medium">{language.name}</span>
+                            </button>
+                        ))}
+                    </div>
+                )}
+            </div>
         </header>
     );
 }
