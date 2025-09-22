@@ -4,7 +4,7 @@ import React from "react";
 export default function Card() {
     return (
         <div className="flex flex-wrap gap-6 justify-center">
-            <div className="w-80 bg-gray-800 flex flex-col p-6 rounded-lg border border-gray-600 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105">
+            <div className="w-90 bg-gray-800 flex flex-col p-6 rounded-lg border border-gray-600 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105">
                 {/* Imagen del proyecto */}
                 <img
                     src="/ChatFriends.png"
