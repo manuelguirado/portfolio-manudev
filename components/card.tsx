@@ -7,7 +7,7 @@ export default function Card() {
             <div className="w-80 bg-gray-800 flex flex-col p-6 rounded-lg border border-gray-600 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105">
                 {/* Imagen del proyecto */}
                 <img
-                    src="../src/assets/images/ChatFriends.png"
+                    src="/ChatFriends.png"
                     alt="Chat Friends Project"
                     className="w-full h-48 object-cover mb-4 rounded-lg"
                 />

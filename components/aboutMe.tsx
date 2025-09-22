@@ -1,5 +1,5 @@
 import React from 'react';
-import { Linkedin, Github } from 'lucide-react';
+import { Linkedin, Github,File } from 'lucide-react';
 import { useScrollReveal } from '../src/hooks/useScrollReveal';
 
 export default function Main() {
@@ -40,12 +40,17 @@ export default function Main() {
                             <Linkedin size={20} className="md:w-6 md:h-6" />
                             <span>LinkedIn</span>
                         </a>
+                        <a href='/CV_Manuel_Guirado_Baeza.pdf' download target='_blank' rel='noopener noreferrer'
+                           className='flex items-center gap-2 hover:text-blue-400 transition-colors text-sm md:text-base'>
+                            <File size={20} className="md:w-6 md:h-6" />
+                            <span>Descargar CV</span>
+                        </a>
                     </div>
                 </div>
                 
                 {/* Imagen de perfil */}
                 <div className='flex-shrink-0 order-first md:order-last'>
-                    <img src="../src/assets/images/yo.jpg" alt="Manuel Guirado Baeza" 
+                    <img src="/yo.jpg" alt="Manuel Guirado Baeza" 
                          className='profile-image rounded-full object-cover shadow-lg mx-auto' />
                 </div>
             </div>
