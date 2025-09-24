@@ -1,17 +1,17 @@
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import LanguageDetector from "i18next-browser-languagedetector";
 
-import esTranslations from './locales/es.json';
-import enTranslations from './locales/en.json';
+import esTranslations from "./locales/es.json";
+import enTranslations from "./locales/en.json";
 
 const resources = {
   es: {
-    translation: esTranslations
+    translation: esTranslations,
   },
   en: {
-    translation: enTranslations
-  }
+    translation: enTranslations,
+  },
 };
 
 i18n
@@ -19,12 +19,12 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: 'es',
+    fallbackLng: "es",
     debug: false,
 
     detection: {
-      order: ['localStorage', 'navigator', 'htmlTag', 'path', 'subdomain'],
-      caches: ['localStorage'],
+      order: ["localStorage", "navigator", "htmlTag", "path", "subdomain"],
+      caches: ["localStorage"],
     },
 
     interpolation: {
