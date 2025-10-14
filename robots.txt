@@ -1,0 +1,14 @@
+# Robots.txt for Manuel Guirado Baeza Portfolio
+# https://manuelguiradobaeza.com
+
+User-agent: *
+Allow: /
+
+# Allow all search engines to crawl the entire site
+Disallow: 
+
+# Sitemap location
+Sitemap: https://manuelguiradobaeza.com/sitemap.xml
+
+# Crawl delay (optional - be polite to search engines)
+Crawl-delay: 1
