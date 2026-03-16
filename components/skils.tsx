@@ -62,6 +62,10 @@ export default function Skills() {
             <img src="/icons/mongodb.svg" alt="MongoDB" className="w-12 h-12 md:w-16 md:h-16" />
             <span className="text-xs block md:hidden mt-2">MongoDB</span>
           </div>
+          <div className="skill-item flex flex-col justify-center items-center p-3 md:p-4 rounded-lg hover:bg-gray-800/30 transition-all duration-300" data-tooltip="PrismaORM">
+            <img src="/icons/prisma.svg" alt="PrismaORM" className="w-12 h-12 md:w-16 md:h-16" />
+            <span className="text-xs block md:hidden mt-2">PrismaORM</span>
+          </div>
         </div>
       </div>
     </div>
