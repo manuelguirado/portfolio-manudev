@@ -16,6 +16,11 @@
   "experience": {
     "title": "Experience",
     "jobs": {
+      "freelance full stack ": {
+        "title": "Full Stack Developer",
+        "period": "October 2025 - April 2026",
+        "description": "Developed a web application for plumbing companies that managed clients, payments, incidents, workers and installed machines, increasing operational efficiency and saving time."
+      },
       "fullstack": {
         "title": "Full Stack Developer - Personal Project",
         "period": "March 2025 - August 2025",
@@ -26,7 +31,7 @@
         "period": "March 2025 - June 2025",
         "description": "Development of an application for users to upload files manually and automatically to Google Drive using Go."
       },
-      "freelance": {
+      "freelance software developer": {
         "title": "Software developer - Remote Freelance",
         "period": "August 2024 - December 2024",
         "description": "Development of a web application for managing schools, institutes and academies using Python and Django."

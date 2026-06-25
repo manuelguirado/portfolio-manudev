@@ -16,6 +16,11 @@
   "experience": {
     "title": "Experiencia",
     "jobs": {
+      "freelance full stack ": {
+        "title": "Desarrollador freelance full stack ",
+        "period": "octubre de 2025  - Abril de 2026",
+        "description": "Desarrollé una aplicación web para empresas de lampistería que gestionó clientes, pagos, incidencias, trabajadores y máquinas instaladas, aumentando la eficiencia operativa y ahorrando tiempo."
+      },
       "fullstack": {
         "title": "Desarrollador Full Stack - Proyecto Personal",
         "period": "Marzo de 2025 - Agosto de 2025",
@@ -26,7 +31,7 @@
         "period": "Marzo de 2025 - Junio de 2025",
         "description": "Desarrollo de una aplicación para que los usuarios puedan subir archivos de manera manual y automática a Google Drive usando Go."
       },
-      "freelance": {
+      "freelance software developer": {
         "title": "Software developer - Freelance remoto",
         "period": "Agosto de 2024 - Diciembre de 2024",
         "description": "Desarrollo de una aplicación web para la gestión de colegios, institutos y academias usando Python y Django."

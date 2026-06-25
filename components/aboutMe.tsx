@@ -41,7 +41,7 @@ export default function Main() {
                             <Linkedin size={20} className="md:w-6 md:h-6" />
                             <span>LinkedIn</span>
                         </a>
-                        <a href='/CV_Manuel_Guirado_Baeza.pdf' download target='_blank' rel='noopener noreferrer'
+                        <a href='/CV manuel guirado baeza.pdf' download target='_blank' rel='noopener noreferrer'
                            className='flex items-center gap-2 hover:text-blue-400 transition-colors text-sm md:text-base'>
                             <File size={20} className="md:w-6 md:h-6" />
                             <span>{t('hero.downloadCV')}</span>

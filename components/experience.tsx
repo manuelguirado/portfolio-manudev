@@ -18,6 +18,17 @@ export default function Experience() {
       {/* Contenedor con el mismo ancho que About me */}
       <div className="w-full max-w-4xl">
         <div className={`space-y-6 stagger-children ${isVisible ? 'visible' : ''}`}>
+            <div className="p-6 rounded-lg">
+            <h3 className="text-3xl text-left font-semibold mb-2">
+              {t('experience.jobs.freelance full stack .title')}
+            </h3>
+            <span className="text-sm mb-4 block text-left">
+              {t('experience.jobs.freelance full stack .period')}
+            </span>
+            <p className="leading-relaxed text-left text-lg">
+              {t('experience.jobs.freelance full stack .description')}
+            </p>
+          </div>
           {/* Experiencia 1 */}
           <div className="p-6 rounded-lg">
             <h3 className="text-3xl text-left font-semibold mb-2">
@@ -47,13 +58,13 @@ export default function Experience() {
           {/* Experiencia 3 */}
           <div className="p-6 rounded-lg">
             <h3 className="text-3xl text-left font-semibold mb-2">
-              {t('experience.jobs.freelance.title')}
+              {t('experience.jobs.freelance software developer.title')}
             </h3>
             <span className="text-sm mb-4 block text-left">
-              {t('experience.jobs.freelance.period')}
+              {t('experience.jobs.freelance software developer.period')}
             </span>
             <p className="leading-relaxed text-left text-lg">
-              {t('experience.jobs.freelance.description')}
+              {t('experience.jobs.freelance software developer.description')}
             </p>
           </div>
           {/* Experiencia 4 */}
